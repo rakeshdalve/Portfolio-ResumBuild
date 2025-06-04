@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Resume from './component/resume'
+import Resume from './component/Resume'
 import { Route, Routes } from 'react-router-dom'
 import Corosal from './Resume-component/Corosal'
 import ScrollTop from './Resume-component/ScrollTop'
