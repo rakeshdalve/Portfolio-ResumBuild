@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Hide everything except #print-area */
+    body * {
+        visibility: hidden;
+    }
+
+    #print-area,
+    #print-area * {
+        visibility: visible;
+    }
+
+    #print-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Remove space on all sides */
+    @page {
+        margin: 0;
+        size: A4;
+    }
+
+    /* Hide download button in print view */
+    button,
+    .no-print {
+        display: none !important;
+    }
+}
